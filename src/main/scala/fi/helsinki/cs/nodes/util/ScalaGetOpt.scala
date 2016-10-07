@@ -39,6 +39,7 @@ import scala.reflect.ClassTag
  *   }
  * }
  *
+ * @copyright University of Helsinki
  * @author Eemil Lagerspetz
  */
 trait ScalaGetOpt {
