@@ -40,6 +40,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
+    <dependency>
       <groupId>fi.helsinki.cs.nodes</groupId>
       <artifactId>getopt-scala</artifactId>
       <version>1.1.0</version>
@@ -92,7 +97,7 @@
           </goals>
          </execution>
         </executions>
-       </plugin>
+      </plugin>
     </plugins>
   </build>
 </project>

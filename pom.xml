@@ -49,7 +49,12 @@
  </distributionManagement>
 
   <dependencies>
-    <!-- Test -->
+    <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
