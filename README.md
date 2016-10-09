@@ -32,16 +32,8 @@ Options to OptMain and ScalaGetOpt are specified as follows:
 ## Scala REPL usage example
 
 ```scala
-// Assume we are in a main class (object) that extends ScalaGetOpt:
-
-scala> object Temp{
-  override def getOpt(args:Array[String], short:String, longOpt:Seq[String]) = {super.getOpt(args, short, longOpt)}
-}
-defined object Temp
-
-scala> import Temp._
-import Temp._
-
+scala> import fi.helsinki.cs.nodes.util.ScalaGetOpt._
+import fi.helsinki.cs.nodes.util.ScalaGetOpt._
 
 scala> val args = Array("abcd", "-c", "--stuff", "stuffval")
 args: Array[String] = Array(abcd, -c, --stuff, stuffval)
