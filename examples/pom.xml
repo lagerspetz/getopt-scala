@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fi.helsinki.cs.nodes</groupId>
+  <artifactId>getopt-scala-examples</artifactId>
+  <version>1.1.0</version>
+  <name>GetOpt for Scala, Examples</name>
+  <description>GNU GetOpt-style command line option parsing for Scala, examples subproject.</description>
+  <packaging>jar</packaging>
+  <inceptionYear>2016</inceptionYear>
+  <licenses>
+    <license>
+	<name>MIT License</name>
+	<url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+   <developers>
+    <developer>
+      <name>Eemil Lagerspetz</name>
+      <email>eemil.lagerspetz@gmail.com</email>
+      <organization>University of Helsinki</organization>
+      <organizationUrl>http://www.cs.helsinki.fi/</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+  <connection>scm:git:git://github.com/lagerspetz/getopt-scala.git</connection>
+  <developerConnection>scm:git:ssh://github.com:lagerspetz/getopt-scala.git</developerConnection>
+  <url>http://github.com/lagerspetz/getopt-scala/tree/master</url>
+</scm>
+  <properties>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <encoding>UTF-8</encoding>
+    <scala.version>2.11.8</scala.version>
+    <scala.major>2.11</scala.major>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>  
+  
+
+  <dependencies>
+    <dependency>
+      <groupId>fi.helsinki.cs.nodes</groupId>
+      <artifactId>getopt-scala</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>compile</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <jvmArgs>
+            <jvmArg>-Xms64m</jvmArg>
+            <jvmArg>-Xmx1024m</jvmArg>
+          </jvmArgs>
+          <recompileMode>incremental</recompileMode>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.2.1</version>
+        <executions>
+         <execution>
+          <id>attach-sources</id>
+          <goals>
+           <goal>jar-no-fork</goal>
+          </goals>
+         </execution>
+        </executions>
+       </plugin>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+        <executions>
+         <execution>
+          <id>attach-javadocs</id>
+          <goals>
+           <goal>jar</goal>
+          </goals>
+         </execution>
+        </executions>
+       </plugin>
+    </plugins>
+  </build>
+</project>
