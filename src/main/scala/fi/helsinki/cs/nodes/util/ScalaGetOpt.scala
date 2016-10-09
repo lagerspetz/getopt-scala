@@ -131,7 +131,10 @@ trait ScalaGetOpt {
 }
 
 /**
- * Object variant for library-style usage.
+ * Object variant for library-style usage. See trait ScalaGetOpt for usage and details.
+ * 
+ * @copyright University of Helsinki
+ * @author Eemil Lagerspetz
  */
 object ScalaGetOpt extends ScalaGetOpt{
   
