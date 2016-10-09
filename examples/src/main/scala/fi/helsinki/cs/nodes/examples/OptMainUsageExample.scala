@@ -5,7 +5,7 @@ import fi.helsinki.cs.nodes.util.OptMain
 /**
  * Example of OptMain usage.
  * Usage of this class:
- fi.helsinki.cs.nodes.examples.OptMainUsageExample -t10000 --regs someregs --samples somesamples --target sometarget --rates pathy --load
+ * fi.helsinki.cs.nodes.examples.OptMainUsageExample -t10000 --regs someregs --samples somesamples --target sometarget --rates pathy --load
  *  
  * @copyright University of Helsinki
  * @author Eemil Lagerspetz
