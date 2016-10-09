@@ -9,6 +9,7 @@
   <description>GNU GetOpt-style command line option parsing for Scala, examples subproject.</description>
   <packaging>jar</packaging>
   <inceptionYear>2016</inceptionYear>
+  <url>https://github.com/lagerspetz/getopt-scala</url>
   <licenses>
     <license>
 	<name>MIT License</name>
