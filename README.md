@@ -25,5 +25,5 @@ This function returns a `Map[String, String]` containing option names specified 
 Options to OptMain and ScalaGetOpt are specified as follows:
 
 - short options: one String with one-character options, followed by `:` or `=` if the options take an argument. Example: `"ac:df:g"` tells ScalaGetOpt that your program accepts these options: `-a -carg -d -f file.txt -g`, where `-c` and `-f` must be given a positional argument (`"arg"` and `"file.txt"` in the example).
-- long options: `Seq[String]` with each string specifying one option, followed by `:` or `=` if the option takes an argument. Example: `Seq("archive", "compress=", "daemon", "file=", "global")` tells ScalaGetOpt that your program accepts these options: `--archive --compress=arg --daemon --file file.txt --global`, where `--compress` and `--file` must be given a positional argument (`"arg"` and `"file.txt"` in the example).
+- long options: `Seq[String]` with each String specifying one option, followed by `:` or `=` if the option takes an argument. Example: `Seq("archive", "compress=", "daemon", "file=", "global")` tells ScalaGetOpt that your program accepts these options: `--archive --compress=arg --daemon --file file.txt --global`, where `--compress` and `--file` must be given a positional argument (`"arg"` and `"file.txt"` in the example).
 
