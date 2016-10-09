@@ -29,3 +29,33 @@ Options to OptMain and ScalaGetOpt are specified as follows:
 
 - You are free to give the options in any order, both on the command line and in the option specs.
 
+## Scala REPL usage example
+
+```scala
+// Assume we are in a main class (object) that extends ScalaGetOpt:
+
+scala> object Temp{
+  override def getOpt(args:Array[String], short:String, longOpt:Seq[String]) = {super.getOpt(args, short, longOpt)}
+}
+defined object Temp
+
+scala> import Temp._
+import Temp._
+
+
+scala> val args = Array("abcd", "-c", "--stuff", "stuffval")
+args: Array[String] = Array(abcd, -c, --stuff, stuffval)
+
+// Note that the "abcd" non-option is ignored here
+scala> val options = getOpt(args, "c", Seq("stuff="))
+options: scala.collection.immutable.Map[String,String] = Map(c -> "", stuff -> stuffval)
+
+scala> val args = Array("abcd", "-c", "--stuff=stuffval")
+args: Array[String] = Array(abcd, -c, --stuff=stuffval)
+
+// You can specify values using --stuff=stuffval as well as --stuff stuffval
+scala> val options = getOpt(args, "c", Seq("stuff="))
+options: scala.collection.immutable.Map[String,String] = Map(c -> "", stuff -> stuffval)
+```
+
+
