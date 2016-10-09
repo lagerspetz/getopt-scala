@@ -20,7 +20,7 @@ import scala.reflect.ClassTag
  *
  * Usage e.g.
  *
- * object MyProgram with ScalaGetOpt{
+ * object MyProgram extends ScalaGetOpt{
  * def main(args: Array[String]) {
  * // Call getOpt with program arg spec(s)
  * val result = getOpt(args, "f:q", Seq("file=", "boolean"))
@@ -128,4 +128,11 @@ trait ScalaGetOpt {
 
   private def longKeyFilter(key: String)(a: String) = a.startsWith(s"--$key")
   private def shortKeyFilter(key: Char)(a: String) = a.startsWith(s"-$key")
+}
+
+/**
+ * Object variant for library-style usage.
+ */
+object ScalaGetOpt extends ScalaGetOpt{
+  
 }
