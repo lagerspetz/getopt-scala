@@ -1,7 +1,7 @@
 # getopt-scala
 GNU GetOpt-style command line argument parsing for Scala.
 
-## Usage: OptMain
+## Usage: OptMain (Since 1.1.0)
 The easiest way to use getopt-scala is through having your main class extend `fi.helsinki.cs.nodes.util.OptMain`.
 You need to define `val shortOptions:String`, `val longOptions:Seq[String]`, so that OptMain knows which options your program takes. The syntax of these is inspired by the Python getopt module: https://docs.python.org/3/library/getopt.html .
 You must not define a main() function. This is used by OptMain to parse the command line arguments. You need to define optMain(), which will be called from OptMain.main after parsing the command line arguments. You can then use these functions:
@@ -12,7 +12,7 @@ You must not define a main() function. This is used by OptMain to parse the comm
 
 See https://github.com/lagerspetz/getopt-scala/blob/master/examples/src/main/scala/fi/helsinki/cs/nodes/examples/OptMainUsageExample.scala for a complete example.
 
-## Usage: Using ScalaGetOpt directly
+## Usage: Using ScalaGetOpt directly (Since 1.0.0)
 
 If you want to parse command line arguments somewhere else than your main function, or just want to use ScalaGetOpt directly, you can extend ScalaGetOpt and call:
 
