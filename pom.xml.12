@@ -3,7 +3,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>fi.helsinki.cs.nodes</groupId>
-  <artifactId>getopt-scala_2.10</artifactId>
+  <artifactId>getopt-scala_2.12</artifactId>
   <version>1.1.0</version>
   <name>GetOpt for Scala</name>
   <description>GNU GetOpt-style command line option parsing for Scala.</description>
@@ -34,7 +34,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
     <encoding>UTF-8</encoding>
     <!-- 2.10.6 (Spark), 2.10.7 (latest), 2.11.12 (latest), 2.12.7 (latest) -->
-    <scala.major>2.10</scala.major>
+    <scala.major>2.12</scala.major>
     <scala.version>${scala.major}.7</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>  
